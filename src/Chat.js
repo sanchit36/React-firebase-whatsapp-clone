@@ -1,4 +1,4 @@
-import { Avatar, IconButton } from "@material-ui/core";
+import { Avatar, Button, IconButton } from "@material-ui/core";
 import {
   AttachFile,
   InsertEmoticon,
@@ -6,8 +6,9 @@ import {
   MoreVert,
   SearchOutlined,
 } from "@material-ui/icons";
+import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import "./Chat.css";
 import db from "./firebase";
 import { useStateVaule } from "./StateProvider";
@@ -57,6 +58,12 @@ function Chat() {
   return (
     <div className="chat">
       <div className="chat__header">
+        <Link to="/">
+          <Button>
+            <ArrowBackIcon />
+          </Button>
+        </Link>
+
         <Avatar src={`https://avatars.dicebear.com/api/human/${seed}.svg`} />
 
         <div className="chat__headerInfo">

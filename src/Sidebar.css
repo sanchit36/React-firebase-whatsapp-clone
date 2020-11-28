@@ -4,6 +4,12 @@
   flex: 0.35;
 }
 
+@media (max-width: 800px) {
+  .sidebar {
+    flex: 1;
+  }
+}
+
 .sidebar__header {
   padding: 20px;
   height: 30px;

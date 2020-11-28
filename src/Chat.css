@@ -5,6 +5,12 @@
   border-left: 1px solid lightgray;
 }
 
+@media (max-width: 800px) {
+  .chat {
+    flex: 1;
+  }
+}
+
 .chat__header {
   height: 30px;
   padding: 20px;
